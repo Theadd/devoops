@@ -14,6 +14,7 @@
 		<link href="plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
 		<link href="plugins/xcharts/xcharts.min.css" rel="stylesheet">
 		<link href="plugins/select2/select2.css" rel="stylesheet">
+		<link href="plugins/bootstro/bootstro.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -22,6 +23,7 @@
 		<![endif]-->
 	</head>
 <body>
+<div class="hidden bootstro-dynamic-elements"></div>
 <!--Start Header-->
 <div id="screensaver">
 	<canvas id="canvas"></canvas>
@@ -186,7 +188,7 @@
 						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">File Uploader</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
+				<li class="dropdown ref-ui-elements">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-desktop"></i>
 						 <span class="hidden-xs">UI Elements</span>
@@ -196,7 +198,7 @@
 						<li><a class="ajax-link" href="ajax/ui_buttons.html">Buttons</a></li>
 						<li><a class="ajax-link" href="ajax/ui_progressbars.html">Progress Bars</a></li>
 						<li><a class="ajax-link" href="ajax/ui_jquery-ui.html">Jquery UI</a></li>
-						<li><a class="ajax-link" href="ajax/ui_icons.html">Icons</a></li>
+						<li class="ref-ui-elements-icons"><a class="ajax-link" href="ajax/ui_icons.html">Icons</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -311,6 +313,7 @@
 						</li>
 					</ul>
 				</li>
+				<li><a href="#" id="tour-anchor-icon">Tour to anchor icon</a></li>
 			</ul>
 		</div>
 		<!--Start Content-->
@@ -333,6 +336,7 @@
 <script src="plugins/justified-gallery/jquery.justifiedgallery.min.js"></script>
 <script src="plugins/tinymce/tinymce.min.js"></script>
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
+<script src="plugins/bootstro/bootstro.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="js/devoops.js"></script>
 </body>

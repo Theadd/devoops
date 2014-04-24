@@ -2428,4 +2428,48 @@ $(document).ready(function () {
 	});
 });
 
+//sample bootstro usage
+var tours = {
+    "success": true,
+    "anchor": [
+        {
+            "selector": ".ref-ui-elements",
+            "title": "Let's take a guided tour!",
+            "content": "Click to expand.",
+            "nextButton": "<span></span>",	//hide next
+			"top": "20px",	//override top position relative to element to the half of a sidebar item to point at the dropdown itself instead of the middle of its content (ul).
+            "step": "0",
+            "action": "next",
+            "selector-next": ".ref-ui-elements > a",
+            "placement": "right"
+        }, {
+            "selector": ".ref-ui-elements-icons",
+            "title": "Next step",
+            "content": "Click to display all icons.<br>Next step will be automatically triggered when completely loaded.",
+            "width": "600px",	//custom width (set as max-width)
+            "nextButton": "<span></span>",	//hide next, it will be triggered by the script at the end of ui_icons.html (bootstro.nextWithDelay();)
+            //"prevButton": "<span></span>",	//hide prev
+			"finishButton": "<span></span>",	//hide finish
+            "step": "1",
+            "placement": "right"
+        }, {
+            "selector": ".fa-anchor:last",	//since its dynamic (from ajax in this case), ":last" is used to avoid selecting the auxiliar element attached at the beggining of body tag
+            "title": "Found it!",
+            "content": "Here it is!",
+            "width": "400px",
+            "step": "2",
+            "dynamic": "<i class=\"fa fa-anchor\"></i>",
+            "placement": "bottom"
+        }
+    ]
+}
+$(function  () {
+    $("body").on("click","#tour-anchor-icon", function() {
+        bootstro.start('', {
+            items : tours.anchor,
+            stopOnBackdropClick: false,
+            stopOnEsc: false
+        });
+    });
+});
 
