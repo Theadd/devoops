@@ -306,7 +306,7 @@ $(document).ready(function(){
                 var top = Math.min(popoverIn.offset().top, $el.offset().top);
                 //distance between docviewTop & min.
                 var topDistance = top - docviewTop;
-
+				$(".popover").appendTo("body");
                 if (topDistance < settings.margin) //the element too up above
                     $('html,body').animate({
                             scrollTop: top - settings.margin},
